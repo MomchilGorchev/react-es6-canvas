@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
+import Canvas from './Canvas'
 import { drawOnCanvas} from './canvas/draw'
 
 export default class App extends Component {
@@ -16,7 +18,7 @@ export default class App extends Component {
   render() {
     return <div>
       <h1>React + Canvas</h1>
-      <canvas id='scene'></canvas>
+      <Canvas />
     </div>
   }
 }
