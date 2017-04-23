@@ -6,5 +6,7 @@ export default class Canvas extends Component {
 		draw: PropTypes.func
 	}
 
-	render() return <canvas id='scene'></canvas>
+	render() {
+		return <canvas id='scene'></canvas>
+	}
 }
