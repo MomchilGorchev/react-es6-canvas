@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
+import AppBar from 'material-ui/AppBar'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import Canvas from './Canvas'
-import { drawOnCanvas} from './canvas/draw'
+import { drawOnCanvas } from './canvas/draw'
 
 export default class App extends Component {
-
-  componentWillMount() {
-
-  }
-
-  componentDidMount(){
-    const canvas = document.getElementById('scene')
-    drawOnCanvas(canvas, window)
-  }
 
 
   render() {
     return <div>
-      <h1>React + Canvas</h1>
-      <Canvas />
+        <MuiThemeProvider>
+            <AppBar
+                title="React + Canvas"
+            />
+        </MuiThemeProvider>
+        <Canvas draw={ drawOnCanvas } />
     </div>
   }
 }
